@@ -8,7 +8,7 @@ auth_bp = Blueprint('auth', __name__, url_prefix='/auth')
 def register():
     if current_user.is_authenticated:
         return redirect(url_for('transaction.accueil'))
-    # ... code d'inscription
+    # Render Template code d'inscription
     return render_template('auth/register.html')
 
 @auth_bp.route('/login', methods=['GET', 'POST'])

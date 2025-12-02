@@ -22,5 +22,5 @@ class Transaction(db.Model):
     description = db.Column(db.String(200), nullable=False)
     montant = db.Column(db.Float, nullable=False)
     categorie = db.Column(db.String(100), nullable=False)
-    type_transaction = db.Column(db.String(10), nullable=False)  # 'revenu' ou 'depense'
+    type_transaction = db.Column(db.String(10), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
